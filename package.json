@@ -1,0 +1,29 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "angular+express+node+mongodb实现一个简单的todolist\r ### 第一步：搭建工程目录",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no3forfuk/todolist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.12.1",
+    "body-parser": "^1.17.2",
+    "captchapng2": "^1.0.2",
+    "express": "^4.15.3",
+    "express-art-template": "^1.0.0",
+    "express-session": "^1.15.4",
+    "formidable": "^1.1.1",
+    "mongodb": "^2.2.30"
+  },
+  "bugs": {
+    "url": "https://github.com/no3forfuk/todolist/issues"
+  },
+  "homepage": "https://github.com/no3forfuk/todolist#readme"
+}
