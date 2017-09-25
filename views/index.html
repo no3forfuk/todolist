@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="todoList">
+
 <head>
     <meta charset="UTF-8">
     <title>todoList</title>
+    <link rel="stylesheet" type="text/css" href="/static/vender/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css">
 </head>
+
 <body>
-   hello world 
-   {{text}}
-   <script src="/views/js/clint.js"></script>
+    <!-- 头部自定义指令标签 -->
+    <c-header></c-header>
+    <!-- 业务模块容器 -->
+    <ui-view></ui-view>
+    <!-- 底部自定义指令标签 -->
+    <c-footer></c-footer>
+    <script src="/static/vender/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="/static/vender/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/vender/angular/angular.js"></script>
+    <script type="text/javascript" src="/static/vender/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/views/js/clint.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,132 @@
+/*头部样式*/
+
+body {
+    background-color: rgb(200, 188, 224);
+}
+
+.jsir-header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(186, 110, 64);
+    border-radius: 2px;
+}
+
+
+/*头部文字*/
+
+.jsir-header .h2 {
+    margin-left: 80px;
+    float: left;
+    font-size: 34px;
+    font-weight: 900;
+    color: rgb(186, 110, 64);
+    text-shadow: -1px -1px 0.5px #fff, 1px 1px 0.5px #000;
+}
+
+.jsir-header .header-p {
+    float: right;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+.register-msg{
+    float: right;
+    font-weight: 700;
+}
+
+
+/*头部按钮*/
+
+.jsir-header .header-p a {
+    display: block;
+    margin-left: 10px;
+    float: left;
+    box-shadow: 1px 1px 4px #444;
+}
+
+
+
+
+/*spa公共样式*/
+
+.jsir-body {
+    margin-top: : 50px;
+}
+
+
+/*登录页面样式*/
+
+.jsir-login {
+
+    width: 380px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: #f1f1f1;
+}
+
+.login-btn {
+    width: 100%;
+}
+
+.login-tips {
+    width: 100%;
+    height: 180px;
+}
+
+.login-img {
+    margin: 20px auto 0px;
+    display: block;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 8px solid #fff;
+    background: url(../img/timg.jpg) no-repeat -31px 0;
+    background-size: cover;
+}
+
+
+/*注册页面*/
+
+.glyphicon-ok {
+    top: 0;
+    color: #44ce1a;
+}
+
+.glyphicon-remove {
+    top: 0;
+    color: #e5292f;
+}
+
+.check-password {
+    margin: 5px auto;
+    font-size: 12px;
+}
+
+.check-password i {
+    display: inline-block;
+    border: 1px solid #abcede;
+    height: 10px;
+    width: 93px;
+    line-height: 10px;
+}
+
+.send-yzm{
+    width: 100px;
+}
+.register-yzm{
+    width: 100%;
+}
+
+.register-btn{
+    width: 100%;
+}
+.register-yzm span{
+    cursor: pointer;
+}
+/*底部样式*/
+
+.jsir-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

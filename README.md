@@ -218,3 +218,90 @@ module.exports = dbTools;
 //引入db工具
 const db = require('./db/db_tools.js');
 ```
+
+### 开始angular框架的使用
+
+* 在index.html中引入所需的文件
+jquery，bootstrap，angular
+
+```html
+    <script src="/static/vender/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="/static/vender/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/vender/angular/angular.js"></script>
+    <script type="text/javascript" src="/static/vender/angular-ui-router/release/angular-ui-router.js"></script>
+```
+* 在app.js中配置返回静态资源中间件
+
+```javascript
+//使用静态资源中间件返回静态资源中间件
+app.use('/static',express.static('./static'));
+```
+
+重启服务器。。此时你是不是觉得每次修改完app.js都要重新启动服务器有点麻烦了
+那么你接下来可以这么做：
+
+1. 度娘 
+
+2. 使用nodemon工具
+
+```javascript
+npm install nodemon -g
+```
+然后在命令行中使用 ``` nodemon app.js``` 代替``` node app.js```  启动服务器 
+
+#### 创建模块对象并声明依赖
+
+在clint.js中编写代码如下：
+
+```javascript
+(function(angular) {
+
+    //创建模块对象声明依赖
+    angular.module('todoList',['ui.router'])
+
+})(angular)
+```
+
+然后在index.html中html标签添加属性 ng-app = "todoList"
+
+```html
+<!-- 声明模块作用范围  即在整个html部分生效 -->
+<html lang="en" ng-app="todoList">
+```
+<h4>创建公共模块 cHeader和cFooter (也就是自定义指令)</h4>
+
+修改clint.js
+
+```javascript
+angular.module('todoList',['ui.router'])
+    //创建头部自定义指令即头部模块
+    .directive('cHeader',function(){
+        return {
+            //定义头部模块渲染模板路径
+            templateUrl:'/views/tpls/header.html'
+        }
+    })
+    //创建底部自定义指令即底部模块
+    .directive('cFooter',function(){
+        return  {
+             //定义底部模块渲染模板路径
+            templateUrl:'./views/tpls/footer.html'
+        }
+    })
+
+```
+
+在/views/tpls/目录下创建header.html和footer.html
+
+在index.html中添加自定义指令标签
+
+```html
+    <!-- 头部自定义指令标签 -->
+    <c-header></c-header>
+    <!-- 业务模块容器 -->
+    <ui-view></ui-view>
+    <!-- 底部自定义指令标签 -->
+    <c-footer></c-footer>
+```
+
+<h4>配置路由规则实现SPA</h4>

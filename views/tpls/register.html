@@ -1,0 +1,39 @@
+
+<div class="jsir-body">
+   <div class="well jsir-login">
+        <div class="h5 text-info">亲..请先注册一下呦!! <span class="register-msg text-danger">{{msg}}</span></div>
+        <form action="" ng-click="doRegister()">
+            <div class="input-group">
+                <span class="input-group-addon">用户名</span>
+                <input name="username" ng-model="username" ng-blur="checkUserName()" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                <i class="input-group-addon glyphicon glyphicon-remove" id="usernameIsOk"></i>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon" >密&nbsp;&nbsp;&nbsp;码</span>
+                <input name="password" ng-model="password" ng-blur="checkPassword()" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+                <i class="input-group-addon glyphicon glyphicon-remove " id="pwdIsOk"></i>
+            </div>
+            <div class="check-password"><span class="text-info">密码强度：</span><i class="level"></i><i class="level"></i><i class="level"></i></div>
+            <div class="input-group">
+                <span class="input-group-addon" >邮&nbsp;&nbsp;&nbsp;箱</span>
+                <input name="email" ng-model="email" ng-blur="checkEmail()" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                <i class="input-group-addon glyphicon glyphicon-remove " id="emailIsOk"></i>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon" >验证码</span>
+                <input name="yzm" ng-model="yzm" ng-keyup="checkyzm()" type="text" class="form-control" placeholder="请输入下方图片中的数字" aria-describedby="basic-addon1" >
+                <i class="input-group-addon glyphicon glyphicon-remove " id="yzmIsOk"></i>
+            </div>
+            <br>
+            <div class="input-group register-yzm">
+                <img class="form-control"  aria-describedby="basic-addon1" src="{{yzmUrl}}">
+                <span class="input-group-addon send-yzm">点击获取验证码</span>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-danger register-btn">注册</button>
+        </form>
+    </div>
+
+</div>
